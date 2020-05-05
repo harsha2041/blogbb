@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Application definition
 
@@ -65,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
@@ -103,12 +106,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -126,7 +130,9 @@ LOGIN_REDIRECT_URL='blog-name'
 
 LOGIN_URL='login'
 
-#AUTH_USER_EMAIL_UNIQUE = True
+
+
+# AUTH_USER_EMAIL_UNIQUE = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -134,6 +140,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'blogbbhelp@gmail.com'
 EMAIL_HOST_PASSWORD = 'cv21af1c$'
 EMAIL_USE_TLS = True
-#EMAIL_USE_SSL = False
 
-#AUTH_USER_MODEL= "blog.users.models.CustomUser"
+
+# EMAIL_USE_SSL = False
+
+# AUTH_USER_MODEL= "blog.users.models.CustomUser"

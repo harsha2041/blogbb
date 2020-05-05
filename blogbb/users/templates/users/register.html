@@ -1,9 +1,9 @@
 
-{% extends "entries/base.html" %}
-
+{% extends "entries/base_login.html" %}
+{% load static %}
 {% block content %}
 
-    <div class="col-md-8">
+    <div class="col-md-7">
 
         <div class="card mb-4 mt-4">
           <div class="card-header">
@@ -23,5 +23,50 @@
         </div>
 
       </div>
+ <div class="col-md-5">
+
+        <div class="card mb-4 mt-4">
+          <div class="card-header">
+            Register on BlogBB
+          </div>
+
+             <!DOCTYPE html>
+<html>
+<body>
+
+<h1><img src="{% static 'images/14.png' %}" width="320" height="300"></h1>
+
+
+<p id="demo"></p>
+
+<br>
+<script>
+var i = 0;
+var txt = 'Register on BlogBB and Post your first Blog in website';
+var speed = 30;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+typeWriter()
+</script>
+
+</body>
+</html>
+
+
+
+
+          <div class="card-body">
+
+           </div>
+        </div>
+
+      </div>
+
 
 {% endblock %}

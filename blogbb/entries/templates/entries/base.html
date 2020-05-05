@@ -1,5 +1,9 @@
 
 {% load static %}
+
+<link rel="shortcut icon"  href="{% static 'images/favicon_new.ico' %}"/>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +14,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Blog</title>
+  <title>BlogBB</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{% static 'entries/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -25,7 +29,8 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="{% url 'blog-name' %}">My Blog</a>
+      <a class="navbar-brand" href="{% url 'blog-name' %}">  <img src="{% static 'images/13.png' %}" width="80" height="30" >   {{user.first_name}} Blog</a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -80,7 +85,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; harshagundapaneni 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy; blogbb 2020</p>
     </div>
     <!-- /.container -->
   </footer>
