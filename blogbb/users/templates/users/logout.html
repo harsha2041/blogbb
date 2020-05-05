@@ -1,0 +1,39 @@
+
+{% extends "entries/base_login.html" %}
+
+{% block content %}
+
+
+    <div class="col-md-8 mt-4">
+
+
+       <style>
+            p.ex1 {
+              padding-bottom: 2em;
+            }
+            </style>
+
+
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <h4>
+
+
+            You have succesfully logged out.
+                <br>
+                <br>
+
+                <p class="ex1"><a
+
+        href="{% url 'login' %}"> Login back Here.
+        </a>
+
+
+        </h4>
+                   </form>
+
+      </div>
+
+{% endblock %}
